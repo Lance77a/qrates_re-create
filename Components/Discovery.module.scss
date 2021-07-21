@@ -1,0 +1,89 @@
+.container {
+    height: auto;
+    width: 100vw;
+    font-family: sans-serif;
+    padding-top: 3.5rem;
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        padding-bottom: 3.5rem;
+    }
+    
+    & > .imageCont {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        padding: 0 3% 0 4%;
+
+        & > .mainImage {
+            display: flex;
+            align-self: center;
+            width: 85%;
+            height: auto;
+            color: red;
+            transform: rotate(5deg);
+            border: 2px solid #000;
+            margin: 0 2%;
+
+            & > a {
+                height: auto;
+            }
+        }
+
+        & > .okSticker {
+            height: auto;
+            max-width: 200px;
+            width: 25%;
+            position: absolute;
+            left: 1rem;
+            transform: rotate(5deg);
+        }
+
+        & > .sidebarText {
+            display: flex;
+            height: 100%;
+            width: 6%;
+            transform: rotate(90deg);
+            justify-content: space-between;
+            margin: auto 0;
+            font-weight: 600;
+            
+            
+            & > a {
+                white-space: nowrap;
+                & > span {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    & > .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+            & > .blurb {
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding: 2.5rem 2rem 1rem;
+            }
+            
+            & > .footerButtons {
+                display: flex;
+                flex-direction: column;
+                padding: 0 2rem 2rem;
+                font-size: 0.8rem;
+
+                
+            }
+    }
+}

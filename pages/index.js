@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Landing.module.scss'
 import Navbar from '../Components/Navbar'
+import Discovery from '../Components/Discovery'
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <main>
+        <Discovery />
+      </main>
     </div>
   )
 }
