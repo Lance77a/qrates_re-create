@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Landing.module.scss'
 import Navbar from '../Components/Navbar'
 import Discovery from '../Components/Discovery'
+import ForFansNav from '../Components/ForFansNav'
+import BrowseRecords from '../Components/BrowseRecords'
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Discovery />
+        <ForFansNav />
+        <BrowseRecords />
       </main>
     </div>
   )

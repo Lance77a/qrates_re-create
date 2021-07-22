@@ -36,7 +36,6 @@ const Discovery = () => {
                         <StyledButton bgColor='white' color='black' border='2px solid black' content='Make A Record' />
                 </div>
             </div>
-           
         </div>
     )
 }
