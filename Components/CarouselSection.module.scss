@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    width: 100%;
+
+    & > .carouselCont {
+        position: relative;
+        height: 500px;
+        width: 60%;
+
+        & > .sticker {
+            position: absolute;
+            color: white;
+            height: 100px;
+            width: 100px;
+        }
+
+        & > .cashSticker{
+            right: 0;
+        }
+        & > .starSticker {
+            left: 0;
+        }
+
+    }
+
+    & > .button {
+        height: 2rem;
+    }
+}

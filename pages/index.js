@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar'
 import Discovery from '../Components/Discovery'
 import ForFansNav from '../Components/ForFansNav'
 import BrowseRecords from '../Components/BrowseRecords'
+import CarouselSection from '../Components/CarouselSection'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Discovery />
         <ForFansNav />
         <BrowseRecords />
+        <CarouselSection />
       </main>
     </div>
   )

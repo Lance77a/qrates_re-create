@@ -4,7 +4,7 @@ import Image from 'next/image';
 import peace from '../public/peaceSticker.png';
 
 const Navbar = () => {
-    const [width, setWidth] = useState('899');
+    const [width, setWidth] = useState(899);
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
