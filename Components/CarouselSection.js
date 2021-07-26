@@ -15,6 +15,7 @@ import starSticker from '../public/static/star_sticker.png';
 
 const CarouselSection = () => {
     const [index, setIndex] = useState(1);
+    const [sticker, setSticker] = useState(false)
     const images = [ slide_1, slide_2, slide_3, slide_4, slide_5, slide_6 ]
     
     useEffect(() => {
@@ -32,23 +33,30 @@ const CarouselSection = () => {
             return () => clearInterval(interval);
       }, []);
 
+      useEffect(() => {
+          const stickerInterval = setInterval(() => {
+              setSticker(prev => prev === sticker && !sticker)
+            }, 6000)
+            return () => clearInterval(stickerInterval);
+      }, []);
+
     return (
         <SectionWrapper bgColor='#000'>
             <section className={styles.container}>
-                <div>
+                <div className={styles.header}>
                     <ContainerTag content='vinyl studio' color='#fff' border='2px solid white' />
-                    <h2>Make it real with Qrates Vinyl Studio</h2>
+                    <h2>Make it real with <span>Qrates Vinyl Studio</span></h2>
                     <p>Design the look and feel of your vinyl and use the profit calculator to
                         immediately see how much your project will cost, and how much you’ll earn.</p>
                 </div>
                 <div className={styles.carouselCont}>
-                    <div className={styles.carouselImage}>
-                        <Image src={images[index]} alt='image carousel' width={500} height={500} fill='responsive' />
+                    <div className={styles.carouselImageCont}>
+                        <Image src={images[index]} className={styles.carouselImage} alt='image carousel' width={700} height={700} fill='responsive' />
                     </div>
-                    <div className={`${styles.sticker} ${styles.cashSticker}`} >
+                    <div className={sticker === true ? `${styles.sticker}` : `${styles.sticker} ${styles.cashSticker}`} >
                         <Image src={cashSticker} alt='Black and white dollar sign sticker' />
                     </div>
-                    <div className={`${styles.sticker} ${styles.starSticker}`} >
+                    <div className={sticker === false ? `${styles.sticker}` : `${styles.sticker} ${styles.starSticker}`} >
                         <Image src={starSticker} alt='Black and white star sticker' />  
                     </div>
                 </div>

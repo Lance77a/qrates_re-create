@@ -18,6 +18,7 @@ const Navbar = () => {
 
     if (open && width >= 990) {
         setOpen(false);
+        document.querySelector('body').classList.remove('fixed')
     }
 
     const closeToggle = () => {

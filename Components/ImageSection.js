@@ -13,7 +13,7 @@ const ImageSection = (props) => {
         <SectionWrapper bgColor={props.mainBg} >
            <section className={styles.container}>
                 <div className={styles.mainImg}>
-                        <Image src={props.mainImage === 'clutterImage' ? clutter : holdingRecord } alt={props.mainImageAlt} className={styles.mainImgCont} width={1000} height={1000} layout="responsive"/>
+                        <Image src={props.mainImage === 'clutterImage' ? clutter : holdingRecord } alt={props.mainImageAlt} className={styles.imageStyling} width={1000} height={1000} layout="responsive"/>
                         <div className={props.sticker === 'recordPlane' ? `${styles.planeSticker}` : `${styles.recordSticker}` }>
                             <Image src={props.sticker === 'recordPlane' ? recordPlane : fastRecord } alt={props.stickerAlt} width={400} height={400} layout="responsive"/>
                         </div>

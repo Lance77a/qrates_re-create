@@ -5,29 +5,89 @@
 
     height: 100%;
     width: 100%;
+    padding: 3rem 0;
+
+
+    & > .header {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        & > h2 {
+            width: auto;
+            font-size: 2.5rem;
+            margin: 1.5rem 0 2rem;
+            line-height: 42px;
+            & > span {
+                display: block;
+            }
+        }
+        & > p {
+            width: 100%;
+            font-size: 1.1rem;
+        }
+    }
 
     & > .carouselCont {
         position: relative;
-        height: 500px;
-        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 50%;
+        width: 100%;
+
+        & > .carouselImageCont {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 80%;
+            width: 80%;
+
+            @media(max-width: 500px){
+                & {
+                    width: 100%;
+                }
+            }
+
+            & .carouselImage {
+                min-height: 72% !important;
+                min-width: 72% !important;
+            }
+        }
 
         & > .sticker {
             position: absolute;
             color: white;
             height: 100px;
             width: 100px;
+            display: none;
         }
 
         & > .cashSticker{
             right: 0;
+            top: 0;
+            display: block;
         }
         & > .starSticker {
-            left: 0;
+            left: -2.5%;
+            bottom: 20%;
+            display: block;
+            width: 20%;
         }
 
     }
 
     & > .button {
         height: 2rem;
+        width: 100%;
+        align-self: center;
+
+        @media(min-width: 770px){
+            height: 4rem;
+            width: 35%;
+        }
     }
 }

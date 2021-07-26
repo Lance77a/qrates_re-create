@@ -15,6 +15,10 @@
         margin-bottom: 1rem;
         border: 2px solid black;
 
+        & .imageStyling {
+            object-fit: cover;
+        }
+
         & > div:nth-of-type(1) {
             position: static !important;
         }
@@ -42,7 +46,7 @@
         flex-direction: column;
         justify-content: space-between;
         
-        height: 38%;
+        height: 40%;
 
         & > .blurb {
             font-weight: bold;
@@ -59,6 +63,15 @@
 
         & > .footerButtons {
             height: 1rem;
+
+            @media(min-width: 770px) {
+                display: flex;
+                width: 55%;
+
+                & > div {
+                    margin-right: 0.5rem;
+                }
+            }
         }
     }
 }
