@@ -25,6 +25,10 @@
 
         & > .leftNav {
             min-width: 3.6;
+
+            & .mobileIcons {
+                display: none;
+            }
         }
 
         & > .navLinks {
