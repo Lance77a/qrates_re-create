@@ -28,6 +28,9 @@
         & > p {
             width: 100%;
             font-size: 1.1rem;
+            @media(min-width: 600px){
+                width: 75%;
+            }
         }
     }
 
@@ -53,8 +56,9 @@
             }
 
             & .carouselImage {
-                min-height: 72% !important;
-                min-width: 72% !important;
+                object-fit: contain;
+                min-height: 80% !important;
+                min-width: 80% !important;
             }
         }
 
@@ -88,6 +92,39 @@
         @media(min-width: 770px){
             height: 4rem;
             width: 35%;
+        }
+    }
+}
+
+@media(min-width: 991px){
+    .container {
+        padding: 3rem 2rem;
+        & > .header {
+            & > p {
+                width: 50%;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+
+        & > .carouselCont {
+            & > .sticker {
+                position: absolute;
+                color: white;
+                display: none;
+            }
+    
+            & > .cashSticker{
+                right: 10%;
+                top: -10%;
+                display: block;
+            }
+            & > .starSticker {
+                left: 10%;
+                bottom: 55%;
+                display: block;
+                width: 15%;
+            }
         }
     }
 }

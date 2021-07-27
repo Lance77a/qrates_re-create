@@ -11,7 +11,7 @@ import fastRecord from '../public/static/fast_record.png';
 const ImageSection = (props) => {
     return (
         <SectionWrapper bgColor={props.mainBg} >
-           <section className={styles.container}>
+           <section className={props.direction ? `${styles.container} ${styles.reverse}` : `${styles.container}` }>
                 <div className={styles.mainImg}>
                         <Image src={props.mainImage === 'clutterImage' ? clutter : holdingRecord } alt={props.mainImageAlt} className={styles.imageStyling} width={1000} height={1000} layout="responsive"/>
                         <div className={props.sticker === 'recordPlane' ? `${styles.planeSticker}` : `${styles.recordSticker}` }>
@@ -20,7 +20,7 @@ const ImageSection = (props) => {
                 </div>
                 <div className={styles.lowerCont} >
                     <div className={styles.blurb}>
-                        < ContainerTag color={props.tagColor} border={props.tagBorder} content={props.tagContent} />
+                        <ContainerTag color={props.tagColor} border={props.tagBorder} content={props.tagContent} />
                         <h2>{props.headerContent}</h2>
                         <p>{props.blurbContent}</p>
                     </div>

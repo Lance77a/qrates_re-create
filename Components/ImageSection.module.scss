@@ -58,6 +58,11 @@
             & > p {
                 font-size: 1.2rem;
                 font-weight: 500;
+                @media(min-width: 600px){
+                    & {
+                       width: 80%;
+                    }
+                }
             }
         }
 
@@ -71,6 +76,58 @@
                 & > div {
                     margin-right: 0.5rem;
                 }
+            }
+        }
+    }
+}
+
+@media(min-width: 991px) {
+    .container.reverse {
+        flex-direction: row-reverse;
+    }
+    .container {
+        flex-direction: row;
+
+        & > .lowerCont {
+            height: 100%;
+            width: 50%;
+            padding: 2rem 2rem;
+            justify-content: space-between;
+
+            & > .blurb {
+                padding-right: 5rem;
+                & > h2 {
+                    margin-top: 1rem;
+                    font-size: 2.5rem;
+                }
+                & > p {
+                    font-size: 1.8rem;
+                }
+            }
+
+            & > .footerButtons {
+                justify-content: start;
+                height: 3rem;
+                width: 80%;
+            }
+        }
+
+        & > .mainImg {
+            height: 100%;
+            width: 50%;
+            margin: 0;
+
+            & > .planeSticker {
+                top: 40%;
+                left: -15%;
+                height: auto;
+                width: 30%;
+            }
+            & > .recordSticker {
+                bottom: 10%;
+                right: -102%;
+                width: 25%;
+                height: auto;
             }
         }
     }

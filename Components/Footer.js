@@ -26,27 +26,28 @@ const Footer = () => {
 
     return (
             <div className={styles.container} >
-                <div>
+                <div className={styles.upperFooter}>
                     <FooterNav header='for artists' navArray={artistsArray} />
                     <FooterNav header='for fans' navArray={fansArray} />
                 </div>
-                <div>
+                <div className={styles.upperFooter}>
                     <FooterNav header='our company' navArray={companyArray} />
                     <FooterNav header='help' navArray={helpArray} />
                 </div>
-                <div className={styles.socials} >
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram-square"></i>
-                    <i class="fab fa-twitter-square"></i>
-
-                </div>
-                <div className={styles.footerBanner}>
-                    <img src='https://qrates.com/assets/common/logos/qrates-logo-footer-88bac955aae3ad066ff2dd2a16ce714cb1c96be01ce8d60b8e750f57d8fe9c22.svg' alt='Qrates Company Banner' />
-                </div>
-                <div className={styles.legal}>
-                    <p>terms of service</p>
-                    <p>privacy policy</p>
-                    <p>legal information</p>
+                <div className={styles.lowerFooter}>
+                    <div className={styles.socials} >
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                    </div>
+                    <div className={styles.footerBanner}>
+                        <img src='https://qrates.com/assets/common/logos/qrates-logo-footer-88bac955aae3ad066ff2dd2a16ce714cb1c96be01ce8d60b8e750f57d8fe9c22.svg' alt='Qrates Company Banner' />
+                    </div>
+                    <div className={styles.legal}>
+                        <p>terms of service</p>
+                        <p>privacy policy</p>
+                        <p>legal information</p>
+                    </div>
                 </div>
             </div>
     )

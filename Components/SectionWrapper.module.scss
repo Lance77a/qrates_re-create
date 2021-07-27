@@ -3,9 +3,18 @@
     background-repeat: no-repeat;
     background-position: 30% top;
     height: 900px;
+    max-height: 1000px;
+    width: 100%;
     color: #fff;
     padding: 2rem 1.25rem 1.5rem 1.25rem;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow: hidden;
+}
+
+@media(min-width: 990px) {
+    .container {
+        padding: 0;
+        height: 800px;
+    }
 }

@@ -5,6 +5,12 @@
     padding-top: 3.5rem;
     overflow: auto;
 
+    & > .headerCont {
+        & > .blurb {
+            display: none;
+        }
+    }
+
     .heading {
         display: flex;
         flex-direction: column;
@@ -12,6 +18,13 @@
         font-size: 3rem;
         text-transform: uppercase;
         padding-bottom: 3.5rem;
+        
+        & .hollowText {
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 1px #000;
+            font-family: sans-serif;
+        }
     }
     
     & > .imageCont {
@@ -72,10 +85,13 @@
         justify-content: center;
         align-content: center;
         text-align: center;
-            & > .blurb {
+            & > .mobileBlurb {
                 font-size: 1.2rem;
                 font-weight: 600;
                 padding: 2.5rem 2rem 1rem;
+                @media(min-width: 991px) {
+                    display: none;
+                }
             }
             
             & > .footerButtons {
@@ -94,5 +110,58 @@
                 }
                 
             }
+    }
+}
+
+@media(min-width: 991px){
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        & > .headerCont {
+            width: 48%;
+            align-self: center;
+
+            & > .blurb {
+                display: block;
+                padding: 2rem;
+
+                & > p {
+                    font-size: 1.7rem;
+                    margin-right: 1.5rem;
+                }
+            }
+            
+            & > .heading {
+                font-size: 4.5rem;
+                text-align: left;
+                padding: 2rem;
+
+                & .hollowText {
+                    -webkit-text-stroke-width: 2px;
+                }
+            }
+        }
+
+        & > .imageCont {
+            position: relative;
+            width: 48%;
+            padding: 0;
+        
+            & > .okSticker {
+                left: -6rem;
+                bottom: 4rem;
+            }
+
+            & > .sidebarText {
+                display: flex;
+                height: 3%;
+            }
+        }
+
+        & > .footer {
+            width: 100%;
+        }
     }
 }

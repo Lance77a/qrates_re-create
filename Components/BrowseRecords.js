@@ -1,8 +1,9 @@
 import ImageSection from './ImageSection';
+import styles from './BrowseRecords.module.scss';
 
 const BrowseRecords = () => {
     return (
-        <div>
+        <div className={styles.imageSectionCont}>
             <ImageSection   
                 mainBg='#FFF804' 
                 mainImage='clutterImage'
@@ -20,6 +21,7 @@ const BrowseRecords = () => {
                 bottomButtonContent='artists on crates'
                 bottomButtonColor='black'
                 bottomButtonBorder='2px solid black'
+                direction='row-reverse'
             />
             <ImageSection 
                 mainBg='#E4E5DE'
@@ -39,7 +41,6 @@ const BrowseRecords = () => {
                 bottomButtonColor='black'
                 bottomButtonBorder='2px solid black'
             />
-            
         </div>
     )
 }

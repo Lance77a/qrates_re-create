@@ -16,33 +16,42 @@
         justify-content: space-evenly;
     }
 
-    .socials {
+    & > .lowerFooter {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         width: 100%;
-        font-size: 3rem;
 
-        & i {
-            margin: 0 1rem;
+        .socials {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-size: 3rem;
+
+            & i {
+                margin: 0 1rem;
+            }
         }
-    }
 
-    & > .footerBanner {
-        margin-top: 4rem;
-        width: 100%;
-        & > img {
-            width: 90%;
-            margin: 0 auto;
+        & > .footerBanner {
+            margin-top: 4rem;
+            width: 100%;
+            & > img {
+                width: 100%;
+                margin: 0 auto;
+            }
         }
-    }
 
-    & > .legal {
-        margin-top: 2rem;
-        width: 100%;
-        font-weight: 600;
-        
-        & > p {
-            margin: 0 1.5rem;
+        & > .legal {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            width: 100%;
+            font-weight: 600;
+            
+            & > p {
+                margin: 0 1.5rem;
+
+            }
         }
     }
 }
@@ -56,7 +65,7 @@
         text-transform: uppercase;
         font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     & ul {
@@ -66,7 +75,58 @@
             a {
                 font-weight: 500;
                 font-size: 1.2rem;
+        }
+        @media(min-width: 900px){
+            & > li {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
 
+@media(min-width: 900px){
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        min-height: 800px;
+
+        & > .upperFooter {
+            width: 50%;
+        }
+
+        & > .lowerFooter {
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            height: 10rem;
+
+            & > .socials {
+                order: 2;
+                
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            & > .footerBanner {
+                order: 1;
+                width: 50%;
+                height: 100%;
+                & img {
+                    height: 80%;
+                    width: 100%;
+                }
+            }
+
+            & > .legal {
+                order: 3;
+                height: 3rem;
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+            }
         }
     }
 }

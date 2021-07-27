@@ -8,10 +8,18 @@ const ForFansNav = () => {
                 <ContainerTag border='2px solid white' content='for fans' />
                 <nav className={styles.nav}>
                     <ul>
-                        <li href="#">Discover</li>
-                        <li href="#">Records</li>
-                        <li href="#">Stories</li>
-                        <li href="#">Lists</li>
+                        <li>
+                            <a href="#">Discover</a>
+                        </li>
+                        <li>
+                            <a href="#">Records</a>
+                        </li>
+                        <li>
+                            <a href="#">Stories</a>
+                        </li>
+                        <li>
+                            <a href="#">Lists</a>
+                        </li>
                     </ul>
                     <div className={styles.footerLink}>
                         <a href="">The lastest from the Qrates Community →</a>

@@ -7,12 +7,15 @@ import StyledButton from './StyledButton';
 const Discovery = () => {
     return (
         <div className={styles.container}>
-            <div>
+            <div className={styles.headerCont}>
                 <h1 className={styles.heading}>
                     Qrates
-                    <span className="hollowText-" >Music in</span>
-                    <span className="hollowText-" >your hands</span>
+                    <span className={styles.hollowText} >Music in</span>
+                    <span className={styles.hollowText} >your hands</span>
                 </h1>
+                <div className={styles.blurb}>
+                    <p>We make it easy for artists to press vinyl, so fans keep pieces of the music they love. ↓</p>
+                </div>
             </div>
             <div className={styles.imageCont}>
                 <div className={styles.mainImage}>
@@ -28,7 +31,7 @@ const Discovery = () => {
                 </div>
             </div>
             <div className={styles.footer}>
-                <div className={styles.blurb}>
+                <div className={styles.mobileBlurb}>
                     <p>We make it easy for artists to press vinyl, so fans keep pieces of the music they love. ↓</p>
                 </div>
                 <div className={styles.footerButtons}>
