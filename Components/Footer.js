@@ -36,9 +36,9 @@ const Footer = () => {
                 </div>
                 <div className={styles.lowerFooter}>
                     <div className={styles.socials} >
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-instagram-square"></i>
-                        <i class="fab fa-twitter-square"></i>
+                        <i className="fab fa-facebook-square"></i>
+                        <i className="fab fa-instagram-square"></i>
+                        <i className="fab fa-twitter-square"></i>
                     </div>
                     <div className={styles.footerBanner}>
                         <img src='https://qrates.com/assets/common/logos/qrates-logo-footer-88bac955aae3ad066ff2dd2a16ce714cb1c96be01ce8d60b8e750f57d8fe9c22.svg' alt='Qrates Company Banner' />

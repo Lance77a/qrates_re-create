@@ -7,6 +7,7 @@ import BrowseRecords from '../Components/BrowseRecords'
 import CarouselSection from '../Components/CarouselSection'
 import ImageGrid from '../Components/ImageGrid'
 import Footer from '../Components/Footer';
+import PortfolioFooter from '../Components/PortfolioFooter'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <ImageGrid />
       </main>
       <Footer />
+      <PortfolioFooter />
     </div>
   )
 }

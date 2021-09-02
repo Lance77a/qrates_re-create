@@ -26,7 +26,6 @@ const Navbar = () => {
         document.querySelector('body').classList.toggle('fixed')
     }
 
-
     return (
         <div className={open ? `${styles.mobileOverlay}` : undefined}>
             <nav className={styles.navbar}>
